@@ -1,0 +1,10 @@
+{
+	"name": "Local Hero",
+	"description": "Local Storage Explorer",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Local Hero"
+	}
+}
