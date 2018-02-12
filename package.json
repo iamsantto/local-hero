@@ -11,6 +11,10 @@
       "transform-object-rest-spread"
     ]
   },
+  "scripts": {
+    "build": "rm -rf ./build && webpack",
+    "build-prod": "rm -rf ./build && webpack && cp manifest.json ./build/"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
