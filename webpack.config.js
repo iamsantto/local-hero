@@ -44,6 +44,47 @@ const rules = [
     test: /\.js$/,
     exclude: /node_modules/,
     use: ['babel-loader'],
+  },
+  {
+    test: /\.(png|jpe?g|gif|svg)$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[name].[ext]'
+        }
+      },
+      {
+        loader: 'image-webpack-loader',
+        options: {
+          mozjpeg: {
+            quality: 65
+          },
+          pngquant: {
+            quality: '10-20',
+            speed: 4
+          },
+          svgo: {
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          },
+          gifsicle: {
+            optimizationLevel: 7,
+            interlaced: false
+          },
+          optipng: {
+            optimizationLevel: 7,
+            interlaced: false
+          }
+        }
+      }
+    ]
   }
 ]
 
@@ -51,7 +92,12 @@ module.exports = {
   devtool: 'nosources-source-map',
   context: sourcePath,
   entry: {
-    app: './index.js'
+    app: [
+      './index.js',
+      './assets/icon128.png',
+      './assets/icon48.png',
+      './assets/icon16.png'
+    ]
   },
   output: {
     path: buildPath,
