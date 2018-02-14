@@ -15,6 +15,9 @@
 	"permissions": [
 		"tabs",
 		"clipboardWrite",
-		"clipboardRead"
+		"clipboardRead",
+		"storage",
+		"http://*/*",
+		"https://*/*"
 	]
 }
