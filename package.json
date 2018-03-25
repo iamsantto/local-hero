@@ -12,8 +12,7 @@
     ]
   },
   "scripts": {
-    "build": "rm -rf ./build && webpack",
-    "build-prod": "rm -rf ./build && webpack && cp manifest.json ./build/"
+    "build": "rm -rf ./build && webpack && cp manifest.json ./build/"
   },
   "dependencies": {
     "aphrodite": "^1.2.5",
