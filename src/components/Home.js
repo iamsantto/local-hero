@@ -23,10 +23,11 @@ class Home extends React.Component {
 	}
 
 	render() {
+		const { site, storage } = this.state
 		return (
 			<div>
-				<h2>{this.state.site.title}</h2>
-				<LocalStorageTable storageData={this.state.storage[this.state.site.id]} editable="false" />
+				<h2>{site.title}</h2>
+				<LocalStorageTable storageData={storage[site.id]} editable="false" />
 			</div>
 		)
 	}
