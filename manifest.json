@@ -1,0 +1,23 @@
+{
+	"name": "Local Hero",
+	"description": "Local Storage Explorer",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Local Hero"
+	},
+	"icons": {
+		"16": "./assets/icon16.png",
+		"48": "./assets/icon48.png",
+		"128": "./assets/icon128.png"
+	},
+	"permissions": [
+		"tabs",
+		"clipboardWrite",
+		"clipboardRead",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	]
+}
